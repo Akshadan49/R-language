@@ -1,13 +1,13 @@
 # R-language
-1.Try to write a code for printing sequence of numbers from 1 to 50 with the differences of 3, 5, 10 
+**1.Try to write a code for printing sequence of numbers from 1 to 50 with the differences of 3, 5, 10 **
 > seq(1,50, by=3)
  [1]  1  4  7 10 13 16 19 22 25 28 31 34 37 40 43 46 49
 > seq(1,50, by=5)
  [1]  1  6 11 16 21 26 31 36 41 46
 > seq(1,50, by=10)
 [1]  1 11 21 31 41
-
-2.What are the different data objects in R? and write syntax and example for each and every object 
+**
+2.What are the different data objects in R? and write syntax and example for each and every object** 
 Ans:R consists of a number of data objects to perform various functions. There are 6 types of objects in R Programming. They include vector, list, matrix, array, factor, and data frame.
 Vectors are one of the basic R programming data objects. They are six types of atomic vectors- logical, integer, character, raw, double, and complex.
 # Create two vectors.
@@ -165,7 +165,8 @@ emp_id    emp_name     salary     start_date
 4     4     Ryan        729.00     2014-05-11
 5     5     Gary        843.25     2015-03-27
 
-3.Create Data frame with 3 columns and 5 rows and write a code to fetch and delete row and a column using index and add new column and row to the existed data frame 
+**3.Create Data frame with 3 columns and 5 rows and write a code to fetch and delete row and a column using index and add new column and row to the existed data frame **
+
 Data_Frame <- data.frame (
   Training = c("Strength", "Stamina", "Other","Power","Degree"),
   Pulse = c(100, 150, 120, 100, 150),
@@ -236,7 +237,7 @@ New_row_DF <- rbind(Data_Frame, c("Strength", 110, 110))
 # Print the new row
 New_row_D
 
-4.Write nested if else statements to print whether the given number is negative, positive or Zero 
+**4.Write nested if else statements to print whether the given number is negative, positive or Zero **
 x <- 0
 if (x < 0) {
 print("Negative number")
@@ -245,7 +246,8 @@ print("Positive number")
 } else
 print("Zero")
 
-5.write a program to input any value and check whether it is character, numeric or special character 
+**5.write a program to input any value and check whether it is character, numeric or special character **
+
 For Digit
 x <-5
 is.numeric(x)
@@ -257,7 +259,7 @@ m ← “/” #
 grepl('[^[:alnum:]]', m)
 which will check for any value that is not a letter or a number. 
 
-6.write difference between break and next also write examples for both
+**6.write difference between break and next also write examples for both**
 Break Statement
 The break keyword is a jump statement that is used to terminate the loop at a particular iteration.
 Syntax 
@@ -301,13 +303,13 @@ if (test_condition)
 [1] "Values are:  9"
 [1] "Values are:  10
 
-7.write a program to print a given vector in reverse format
+**7.write a program to print a given vector in reverse format**
 x= c(1,5.6,3,10,3.5,5)
 print(x)
 rx = rev(x)
 print(rx)
-[1]  5.0  3.5 10.0  3.0  5.6  1.0
-8.write a program to get the mode value of the given vector (‘a’,’b’,’c’,’t’,’a’,’c’,’r’,’a’,’c’,’t’,’z’,’r’,’v’,’t’,’u’,’e’,’t’) 
+[1]  5.0  3.5 10.0  3.0  5.6  1.0****
+**8.write a program to get the mode value of the given vector (‘a’,’b’,’c’,’t’,’a’,’c’,’r’,’a’,’c’,’t’,’z’,’r’,’v’,’t’,’u’,’e’,’t’)**
 > # Create the function.
 > getmode <- function(v) {
 +     uniqv <- unique(v)
@@ -320,7 +322,7 @@ print(rx)
 > print(result)
 [1] "t"
 
-9.Write a function to filter only data belongs to ‘setosa’ in species of Iris dataset.( using dplyr package)
+**9.Write a function to filter only data belongs to ‘setosa’ in species of Iris dataset.( using dplyr package)**
 
 > install.packages("dplyr")
 # The datasets package needs to be loaded to access our data 
@@ -341,7 +343,8 @@ library(dplyr)
 # filter() the data for species virginica
 setosa <- filter(iris, species == "setosa")
 head(setosa) # This dispalys the first six rows
-10.Create a new column for iris dataset with the name of Means_of_obs, which contains mean value of each row.( using dplyr package) 
+**10.Create a new column for iris dataset with the name of Means_of_obs, which contains mean value of each row.( using dplyr package) **
+
 #remove column 5
 iris_subset <- iris[,-5]
  
@@ -356,7 +359,7 @@ iris_subset$mean_of_obs <- apply(iris_subset, 1, mean)
 head(iris_subset)
 
 
-11.Filter data for the “versicolor” and get only ‘sepel_length’ and Sepel _width’ columns.( using dplyr package) 
+**11.Filter data for the “versicolor” and get only ‘sepel_length’ and Sepel _width’ columns.( using dplyr package) **
 
 rm(list = ls(all = TRUE))
 # install.packages('dplyr', dependencies = TRUE) # install it if you don't have
@@ -377,7 +380,7 @@ filter(iris2, Species == 'versicolor') # Species == 'versicolor' is the criteria
 select(iris2, Petal.Length, Sepal.Width)
 
 
-12.create below plots for the mtcars also write your inferences for each and every plot (use ggplot package) Use Different ( Size , Colour ) 
+**12.create below plots for the mtcars also write your inferences for each and every plot (use ggplot package) Use Different ( Size , Colour )** 
 > library(ggplot2)
 > str(mtcars)
 'data.frame':	32 obs. of  11 variables:
